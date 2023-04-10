@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "roboto mono";
+}
+body{
+    background: rgb(2, 29, 20);
+    color: white;
+    overflow: hidden;
+}
+.inputBlock{
+    width: 250px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+   background: rgba(9, 55, 40, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(9, 55, 40, 0.3);
+z-index: 1 !important;
+}
+#myInput{
+    background: rgba(9, 55, 40, 0.2);
+    border-radius: 6px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: none;
+    color: white;
+    padding: 10px 10px;
+}
+#myInput:focus{
+    outline: none;
+}
+.contentBlock{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+}
+.num{
+    background: rgba(9, 55, 40, 0.2);
+    border-radius: 16px 16px 0px 0px ;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(9, 55, 40, 0.3);
+    width: 200px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#one0 , #two , #three , #four , #five , #six{
+     background: rgba(9, 55, 40, 0.2);
+    border-radius: 0px 0px 16px 16px ;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(9, 55, 40, 0.3);
+    width: 200px;
+    height: 350px;
+    overflow-x: hidden;
+    text-align: center;
+}
+::-webkit-scrollbar{
+    width: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    /* border-radius: 4px; */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-bottom-right-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+::-webkit-scrollbar-thumb{
+    height: 4px;
+    background: rgba(6, 212, 185, 0.2);
+    /* border-radius: 4px; */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom-right-radius: 10px;
+}
+.inputBlock::before{
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 1150px 1450px 0px 0px ;
+    animation: animate 10s infinite alternate;
+}
+@keyframes animate {
+    0%{
+        transform: translateX(0px) translateY(0px);
+        border-radius: 50%;
+    }
+    50%{
+        transform: translateX(1450px);
+    }
+    100%{
+        border-radius: 0%;
+        transform: translateX(1450px) translateY(-600px);
+    }
+}
+.inputBlock::after{
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 0px 0px  0px 1450px;
+    animation: animate1 10s infinite alternate;
+    z-index: -1;
+}
+@keyframes animate1 {
+    0%{
+        transform: translateX(0px) translateY(0px);
+        border-radius: 50%;
+    }
+    50%{
+        transform: translateX(-1450px);
+    }
+    100%{
+        transform: translateX(-1450px) translateY(600px);
+        border-radius: 0%;
+    }
+}
